@@ -30,6 +30,8 @@ function renderChart() {
     productClicks.push(appState.allProducts[i].timesShown);
   }
 
+  // set data values
+
   const data = {
     labels: productNames,
     datasets: [
@@ -50,10 +52,14 @@ function renderChart() {
     ],
   };
 
+  // set chart configuration
+
   const config = {
     type: "bar",
     data: data,
   };
+
+  // call chart
 
   const newChart = new Chart(canvasElem, config);
 }
